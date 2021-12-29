@@ -8,8 +8,8 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     min-height: 100%;
-    color: #333333;
-    background: #f7f7f7;
+    color: #5c5b5b;
+    background: #f5f5f5;
 }
 
 #header-flex {
@@ -41,19 +41,21 @@ body {
 
 #header-flex ul li a {
     display: block;
-    padding: 15px 10px;
-    color: #e4e7ec;
+    padding: 16px 10px;
+    font-family: 'Archivo', sans-serif;
+    color: #f1f3f5;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
+    font-size: 14px;
+    line-height: 1;
+    /* letter-spacing: 0.1em; */
 	border-bottom: 2px solid rgba(255, 255, 255, 0);
 	border-top: 2px solid rgba(255, 255, 255, 0);
 	transition: .3s ease-in-out;
 }
 
 #header-flex ul li a:hover {
-    border-bottom: 2px solid #e4e7ec;
+    border-bottom: 2px solid #f1f3f5;
 }
 
 #top-logo {
@@ -136,19 +138,25 @@ img#map {
 } */
 
 #main-img {
-    background-image: url('./assets/mr_coffee_room.jpg');
-    background-size: cover;
-    height: 100vh;
+    /* background-image: url('./assets/mr_coffee_room.jpg');
+    background-size: cover; */
+    /* height: 100vh; */
+    position: relative;
 }
 
 #main-img img {
-    width: 100%;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #main-img h1 {
+    position: absolute;
+    top: 10%;
+    width: 100%;
     text-align: center;
     color: white;
-    padding-top: 2em;
+    margin-top: 0;
     font-weight: 900;
     text-shadow: 2px 2px 2px #666666;
 }
@@ -158,8 +166,10 @@ img#map {
 }
 
 .info-cards {
-    text-align: center;
+    justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -168,14 +178,22 @@ img#map {
     text-align: center;
     color: white;
     font-weight: bold;
+    width: 300px;
     padding: 40px 20px;
-    width: 27%;
+    margin: 20px;
+    /* min-width: 180px; */
+    /* max-width: 340px; */
+    /* height: 400px; */
+    /* flex-basis: 0; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    box-sizing: border-box;
     box-shadow: 3px 2px 3px #bac2c8;
 }
 
-.info-card.w-margin {
+/* .info-card.w-margin {
     margin: 0 25px;
-}
+} */
 
 .info-icon img {
     height: 100px;
@@ -330,8 +348,9 @@ input[type=text]::placeholder, textarea::placeholder {
     border: 1px solid #6a7b8b;
     border-right: 2px solid #6a7b8b;
     width: 85%;
+    max-width: 900px;
     position: absolute;
-    left: 7.5%;
+    /* left: 7.5%; */
     top: 50vh;
     padding: 40px 0;
 }
@@ -354,12 +373,22 @@ input[type=text]::placeholder, textarea::placeholder {
         height: 40px;
     }
 
+    #main-img img {
+        display: none;
+    }
+
     #main-img {
-        height: 40vh;
+        background-image: url('./assets/mr_coffee_room.jpg');
+        background-size: cover;
+        background-position-x: center;
+        height: 70vh;
     }
 
     #main-img h1 {
-        padding-top: 0.8em;
+        /* padding-top: 0.8em; */
+        padding: 0 8px;
+        box-sizing: border-box;
+        top: 8%;
         font-size: 1.6em;
     }
 
@@ -451,16 +480,17 @@ input[type=text]::placeholder, textarea::placeholder {
         height: 60vh;
     }
 
-    #main-img h1 {
+    /* #main-img h1 {
         padding: 16px 4px;
-    }
+    } */
 
     .info-card {
         width: auto;
+        margin: 0 10px;
     }
 
-    .info-card, .info-card.w-margin {
-        margin: 20px 0;
+    .info-card.w-margin {
+        margin: 40px 10px;
     }
 
     .info-icon img {

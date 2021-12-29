@@ -39,11 +39,12 @@ function validateForm(ev) {
     }
 
     // clear form
-    document.forms[0].reset();
+    document.getElementById("contact-form").reset();
+    // document.forms[0].reset();
 
     // display pop-up message
     var popUp = document.getElementById('pop-up');
-    popUp.style.display = "block";
+    popUp.style.display = "flex";
     var modal = document.getElementsByClassName('modal');
     modal[0].scrollIntoView();
     
@@ -78,7 +79,7 @@ function checkIfValidEmail(email) {
 }
 
 function checkNameFormat(name) {
-    return /[a-zA-Z]*[a-zA-Z ]+/.test(name);
+    return /^[a-zA-Z]+[a-zA-Z ]*/.test(name);
 }
 
 function closePopUp() {
