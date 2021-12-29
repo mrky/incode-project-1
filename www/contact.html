@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./application.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="./form.js"></script>
 </head>
 <body>
 
@@ -23,19 +24,72 @@
     </ul>
 </div>
 
-<div id="top-logo">
-    <img src="./assets/logo_mrcoffee.png" alt="logo_mrcoffee">
-</div>
+<div class="pop-up-container">
+    <div id="top-logo">
+        <img src="./assets/logo_mrcoffee.png" alt="logo_mrcoffee">
+    </div>
 
-<div id="main-contact">
-    <h2 class="text-centered">On vous attend !</h2>
-    <p>
-        <b>Mr Coffee</b><br />15 place Jules Guesde<br />75006 Paris
-    </p>
-    <p>
-        Tel : +33 9 46 25 78 45<br />Mail : contact@mr-coffee.com
-    </p>
-    <img id="map" src="./assets/map.png" alt="map">
+    <div id="main-contact">
+        <div id="pop-up">
+            <div class="modal">
+                <div class="modal-content">
+
+                    <img id="pop-up-logo" src="./assets/logo_dark.png" alt="Logo">
+
+                    <div class="modal-message">
+                        <h2 class="text-centered">MERCI</h2>
+                        <h2 class="text-centered">Votre message a bien été envoyé !</h2>
+                        <p class="bold">
+                            Nous essaierons d’y répondre au mieux dans les plus brefs
+                            délais. À bientot chez Mr.Coffee
+                        </p>
+                    </div>
+
+                    <div class="centered-content">
+                        <button id="close-pop-up" type="button">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <h2 class="text-centered">Dites nous tout !</h2>
+            
+            <form id="contact-form" action="#">
+            
+                <label for="surname">Surname *</label>
+                <input id="surname" data-name="Surname" type="text" name="surname" required="required" placeholder="Your surname...">
+            
+                <label for="fname">First name *</label>
+                <input id="fname" data-name="First name" type="text" name="firstname" required="required" placeholder="Your first name...">
+            
+                <label for="phone">Mobile phone</label>
+                <input id="phone" data-name="Mobile phone" type="tel" name="phone" placeholder="Your number...">
+            
+                <label for="email">E-mail *</label>
+                <input id="email" data-name="E-mail" type="email" name="email" required="required" placeholder="Your email address...">
+
+                <label for="message">Message *</label>
+                <textarea id="message" data-name="Message" name="message" required="required" placeholder="Tapez votre message ici"></textarea>
+            
+                <div class="centered-content">
+                    <input id="submit-form" type="submit" value="Send">
+                </div>
+            
+            </form>
+        </div>
+
+        <h2 class="text-centered">On vous attend !</h2>
+        <p>
+            <b>Mr Coffee</b><br />15 place Jules Guesde<br />75006 Paris
+        </p>
+        <p>
+            Tel : +33 9 46 25 78 45<br />Mail : contact@mr-coffee.com
+        </p>
+        <img id="map" src="./assets/map.png" alt="map">
+    </div>
 </div>
 
 
